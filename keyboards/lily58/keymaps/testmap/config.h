@@ -1,4 +1,6 @@
 /*
+This is the c configuration file for the keymap
+
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
 
@@ -18,21 +20,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+/* Select hand configuration */
 
-#ifndef SOFT_SERIAL_PIN
-#define SOFT_SERIAL_PIN D2
-#define SERIAL_USE_MULTI_TRANSACTION
-#endif
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
 
-#if !defined(NO_ACTION_MACRO)
-    #define NO_ACTION_MACRO
-#endif
-#if !defined(NO_ACTION_FUNCTION)
-    #define NO_ACTION_FUNCTION
-#endif
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 100
 
-#define DIODE_DIRECTION COL2ROW
+#undef RGBLED_NUM
+#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 27
+#define RGBLIGHT_LIMIT_VAL 120
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 17
+#define RGBLIGHT_VAL_STEP 17
 
-// Use the lily version to get the Lily58 logo instead of the qmk logo
-#define OLED_FONT_H "lib/glcdfont_lily.c"
+// Underglow
+/*
+#undef RGBLED_NUM
+#define RGBLED_NUM 14    // Number of LEDs
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_SLEEP
+*/
