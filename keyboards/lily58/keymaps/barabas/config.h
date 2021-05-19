@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
+
+/*
 #ifndef SOFT_SERIAL_PIN
 #define SOFT_SERIAL_PIN D2
 #define SERIAL_USE_MULTI_TRANSACTION
@@ -36,3 +38,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Use the lily version to get the Lily58 logo instead of the qmk logo
 #define OLED_FONT_H "lib/glcdfont_lily.c"
+*/
